@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9482dc1a-6065-40c1-aec2-3d99cef94a41" name="Default Changelist" comment="" />
+    <list default="true" id="9482dc1a-6065-40c1-aec2-3d99cef94a41" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sportspp/Mobile/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../sportspp/Mobile/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sportspp/Mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../sportspp/Mobile/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sportspp/Mobile/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../sportspp/Mobile/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="2FeqPo1Hf5aIQsDvZIZQ4AH9Oos" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
