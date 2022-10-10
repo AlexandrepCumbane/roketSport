@@ -1,6 +1,25 @@
 import express from 'express';
 
 const app = express();
+/**
+ * Type of parameters
+ * Query
+ * Route
+ * Body
+ */
+
+
+// HTTP METHODS / API REST FULL / HTTP Codes
+
+// List
+app.get('/games',(req, res)=>{
+    return res.status(201).json([])
+})
+
+// create
+app.post('/ads',(req, res)=>{
+    return res.status(201).json([])
+})
 
 app.get('/ads', (req, res) => {
     return res.json([
