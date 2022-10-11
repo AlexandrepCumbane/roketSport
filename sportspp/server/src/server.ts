@@ -1,19 +1,28 @@
 import express from 'express';
+import {PrismaClient} from '@prisma/client'
 
 const app = express();
-/**
- * Type of parameters
- * Query
- * Route
- * Body
- */
+
+// connect to prisma
+const prisma = new PrismaClient({
+    
+})
 
 
 // HTTP METHODS / API REST FULL / HTTP Codes
 
 // List
-app.get('/games',(req, res)=>{
-    return res.status(201).json([])
+app.get('/games',async (req, res)=>{
+    const games = await prisma.game.findMany({
+        include: {
+            _count:{
+                select:{
+                    ads:true,
+                }
+            }
+        }
+    })
+    return res.status(201).json(games)
 })
 
 // create
@@ -21,14 +30,14 @@ app.post('/ads',(req, res)=>{
     return res.status(201).json([])
 })
 
-app.get('/games/:id/ads', (req, res) => {
-    return res.json([
-        {id: '1', name: 'Alex'},
-        {id: '2', name: 'Alex1'},
-        {id: '3', name: 'Alex22'},
-        {id: '4', name: 'Alexxss'},
-        {id: '4', name: 'Alexxss'},
-    ])
+app.get('/games/:id/ads', async (req, res) => {
+    const gameId = req.params.id;
+    const ads = await prisma.ad.findMany({
+        where: {
+             gameId,
+        }
+    })
+    return res.json(ads)
 })
 
 app.get('/ads/:id/discord ', (req, res) => {
