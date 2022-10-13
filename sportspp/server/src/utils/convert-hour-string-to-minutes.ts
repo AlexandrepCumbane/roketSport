@@ -1,10 +1,12 @@
 /**
- * 18:00 -> 1080
- * @param hoursString 
+ * 
+ * @param hourString 
+ * @returns 
  */
-export function convertHoursStringToMinutes(hoursString: string){
-    
-    const[hours, minutes] = hoursString.split(':').map(Number)
+export function convertHoursStringToMinutes(hourString: string){
+
+   const [hours, minutes] = hourString.split(':').map(Number)
+
     const minutesAmount = (hours * 60) + minutes;
 
     return minutesAmount;
