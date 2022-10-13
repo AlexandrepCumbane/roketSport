@@ -22,7 +22,7 @@ model Ad{
   gameId String
 
   name            String
-  yearsPlaying    String
+  yearsPlaying    Int
   discord         String
   weekDay         String
   hourStart       Int
