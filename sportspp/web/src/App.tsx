@@ -4,6 +4,7 @@ import {MagnifyingGlassPlus} from 'phosphor-react'
 import { GameBanner } from './components/GameBanner';
 import { CreateAdBanner } from './components/CreateAdBanner';
 import { useEffect, useState } from 'react';
+import * as Dialog from '@radix-ui/react-dialog'
 
 interface Game{
   id: string;
@@ -38,13 +39,15 @@ function App() {
           return (
             <GameBanner
             bannerUrl={games.bannerUrl}
-            title='league od legends'
-            adsCount={1}
+            title={games.title}
+            adsCount={games._count.ads}
           />
           )
         })}
-      </div>
-      <CreateAdBanner/>
+      </div> 
+      <Dialog.Root>
+        <CreateAdBanner/>
+      </Dialog.Root>
     </div>
   )
 }
