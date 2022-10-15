@@ -9,45 +9,43 @@ interface Game{
   id: string;
   title: string;
   bannerUrl: string;
-  ads:number;
+  _count:{
+    ads:number;
+  }
 }
-
 function App() {
 
   const [games, setGames] = useState<Game[]>([])
 
-    useEffect(()=>{
-      fetch('http://localhost:3001/games')
-        .then(response => response.json())
-        .then(data=>{
-          setGames(data);
-        })
-    }, [])
+  useEffect(()=>{
+    fetch('http://localhost:3001/games')
+      .then(response => response.json())
+      .then(data=>{
+        setGames(data);
+      })
+  }, [])
 
   return (
-    <div className='max-w-[1344] max-auto flex flex-col items-center my-20'>
-      {/* Logo */}
-      <img src={logoImg} alt=''/> 
+    <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
+      <img src={logoImg} alt=""/>
 
-      <h1 className='text-6xl text-white font-black mt-20'> Seu <span className='bg-nlw-gradient text-transparent bg-clip-text' >duo</span> esta aqui.</h1>
+      <h1 className='text-6xl text-white font-black mt-20'> 
+        Seu <span className='bg-nlw-gradient text-transparent bg-clip-text' >duo</span> esta aqui.
+      </h1>
 
-      {/* list of games */}
-      <div className='grid grid-cols-6 gap-6 mt-16' >
-          {games.map(game=>{
-            return (
-                <GameBanner 
-                  key={game.id}
-                  bannerUrl={game.bannerUrl} 
-                  title={game.title} 
-                  adsCount={game._count.ads}
-                />            
-              )
-          })}
+      <div className='grid grid-cols-6 gap-6 mt-16'>
+        {games.map(games =>{
+          return (
+            <GameBanner
+            bannerUrl={games.bannerUrl}
+            title='league od legends'
+            adsCount={1}
+          />
+          )
+        })}
       </div>
       <CreateAdBanner/>
-
     </div>
   )
 }
-
 export default App
