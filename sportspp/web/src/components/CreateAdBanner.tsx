@@ -10,10 +10,10 @@ export function CreateAdBanner(){
                 <strong className=' text-2xl text-white  font-black block'>Nao encontrou o seu duo</strong>
                 <span className='text-zinc-400 block'>Publique Um anuncio para encontrar novos players</span> 
             </div>
-            <button className='px-3 py-4 bg-violet-500 hover:bg-violet-600 text-white rounded flex items-center gap-3 '>
+            <Dialog.Trigger className='px-3 py-4 bg-violet-500 hover:bg-violet-600 text-white rounded flex items-center gap-3 '>
                 <MagnifyingGlassPlus size='24'/>
                 publicar anuncio
-            </button>
+            </Dialog.Trigger>
             </div>
         </div>
         )
