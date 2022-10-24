@@ -1,5 +1,6 @@
  import {StatusBar} from 'react-native'
  import { Background } from './src/components/Background';
+ import { useEffect } from 'react';
  import {
   useFonts,
   Inter_400Regular,
