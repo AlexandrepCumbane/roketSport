@@ -86,6 +86,13 @@ function App() {
                     <div className='flex flex-col gap-2'>
                       <label htmlFor="weekDays">Quando costuma jogar?</label>
                       <div className='grid grid-cols-4 gap-1'>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Domingo">D</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Segunda">S</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Terca">T</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Quarta">Q</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Quinta">Q</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Sexta">S</button>
+                        <button className='w-8 h-8 rounded bg-zinc-900' title="Sabado">S</button>
                       </div>
                     </div>
                     <div  className='flex flex-col gap-2 flex-1'>
